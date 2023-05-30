@@ -9,7 +9,7 @@ if os.path.exists(libdir):
     sys.path.append(libdir)
 
 import logging
-from waveshare_epd import epd7in3f
+from lib import epd7in3f
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
@@ -48,17 +48,17 @@ try:
     
     # read bmp file 
     logging.info("2.read bmp file")
-    Himage = Image.open(os.path.join(picdir, 'zelda002.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'zelda02.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(15)
 
     logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, 'zelda001.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'zelda01.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(15)
 
     logging.info("4.read bmp file")
-    Himage = Image.open(os.path.join(picdir, 'zelda002.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'zelda00.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(15)
     
