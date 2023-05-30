@@ -48,12 +48,17 @@ try:
     
     # read bmp file 
     logging.info("2.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '7in3f1.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'zelda002.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(15)
 
     logging.info("3.read bmp file")
-    Himage = Image.open(os.path.join(picdir, '7in3f3.bmp'))
+    Himage = Image.open(os.path.join(picdir, 'zelda001.bmp'))
+    epd.display(epd.getbuffer(Himage))
+    time.sleep(15)
+
+    logging.info("4.read bmp file")
+    Himage = Image.open(os.path.join(picdir, 'zelda002.bmp'))
     epd.display(epd.getbuffer(Himage))
     time.sleep(15)
     
