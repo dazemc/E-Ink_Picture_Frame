@@ -1,8 +1,11 @@
 # E-Ink Picture Display in Python
 
-This is a basic Python script for displaying images on a 7.3 inch E-Ink display using the `epd7in3f` library. 
+This is a basic Python script for displaying images on a Waveshare 7.3 inch E-Ink display using the `epd7in3f` library. 
+Here is a [link](https://www.waveshare.com/7.3inch-e-paper-f.htm) to the product page.
 
-![E-Ink Picture Frame](./README_IMG.jpg "E-Ink Picture Frame")
+![E-Ink Picture Frame](./README_IMG.jpg "E-Ink Picture Frame") 
+![E-Ink Picture Frame](.//CAD/eInkCAD.png "CAD")
+![E-Ink Picture Frame](./CAD/Draft.jpg "Draft")
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -13,7 +16,7 @@ This is a basic Python script for displaying images on a 7.3 inch E-Ink display 
 To run this script, you will need the following:
 
 1. Python 3.6 or above
-2. [epd7in3f](https://github.com/dazemc/E-Ink_Picture_Frame) library
+2. epd7in3f library
 3. Pillow Library - `pip install pillow`
 4. Bitmap (.bmp) images
 
