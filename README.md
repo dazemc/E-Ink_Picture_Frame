@@ -5,7 +5,7 @@ Here is a [link](https://www.waveshare.com/7.3inch-e-paper-f.htm) to the product
 
 ![E-Ink Picture Frame](./README_IMG.jpg "E-Ink Picture Frame") 
 ![E-Ink Picture Frame](.//CAD/eInkCAD.png "CAD")
-![E-Ink Picture Frame](./CAD/Draft.jpg "Draft")
+![E-Ink Picture Frame](./CAD/Draft.png "Draft")
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
