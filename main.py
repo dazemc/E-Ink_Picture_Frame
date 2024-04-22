@@ -14,7 +14,7 @@ def main():
         ink.display_image(image)
         ink.clear()
         ink.font(font, 24)
-        ink.display_text("hello world", (5, 0), 24, ink.ink.RED)
+        ink.display_text(text="hello world", location=(5, 0), size=24, fill="#FF0000")
         ink.clear()
         ink.sleep()
                     

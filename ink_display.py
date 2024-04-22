@@ -32,7 +32,7 @@ class InkDisplay:
         logging.info("ctrl + c:")
         epd7in3f.epdconfig.module_exit()
         
-    def font(self, font, size) -> None:
+    def font(self, font, size, color) -> None:
         self.fonts[size] = ImageFont.truetype(os.path.join(FONT_DIR, font), size)
 
         
@@ -46,7 +46,7 @@ class InkDisplay:
     def display_text(self, text, location, size, fill):
         Himage = Image.new('RGB', (self.ink.width, self.ink.height), self.ink.WHITE)
         draw = ImageDraw.Draw(Himage)
-        draw.text((location), text, self.fonts[size], fill)
+        draw.text((location), text, self.fonts[size], fill=fill)
         self.ink.display(self.ink.getbuffer(Himage))
         time.sleep(3)
         
