@@ -44,7 +44,7 @@ class InkDisplay:
         time.sleep(15)
 
     def display_text(self, text, location, size, fill):
-        Himage = ImageDraw.new('RGB', (self.ink.width, self.ink.height), self.ink.WHITE)
+        Himage = Image.new('RGB', (self.ink.width, self.ink.height), self.ink.WHITE)
         draw = ImageDraw.Draw(Himage)
         draw.text((location), text, self.fonts[size], fill)
         self.ink.display(self.ink.getbuffer(Himage))
