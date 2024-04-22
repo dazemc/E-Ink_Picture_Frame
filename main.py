@@ -27,7 +27,7 @@ def main():
         ink.draw_text(
             (5, 30), text="world", font=font, size=16, color="#FF0000", draw=draw
         )
-        draw.line((5, 170, 80, 245), fill="#0000FF")
+        draw.line([(5, 170), (80, 245)], fill="#0000FF")
         ink.display_draw(draw_image)
         ink.clear()
 
