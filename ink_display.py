@@ -45,9 +45,8 @@ class InkDisplay:
     def draw(self, image) -> ImageDraw:
         return ImageDraw.Draw(image)
 
-    def draw_text(self, location, text, font, size, color, image) -> None:
+    def draw_text(self, location, text, font, size, color, draw) -> None:
         logging.info(f"writing text to draw image: {text}")
-        draw = self.draw(image)
         draw.text(
             (location),
             text=text,
