@@ -15,8 +15,8 @@ def main():
         ink.clear()
 
         # DISPLAY IMAGE
-        # ink.display_image(image)
-        # ink.clear()
+        ink.display_image(image)
+        ink.clear()
 
         # CREATE DRAW
         draw_image = ink.blank_image()
@@ -27,6 +27,7 @@ def main():
         ink.draw_text(
             (5, 30), text="world", font=font, size=16, color="#FF0000", draw=draw
         )
+        logging.info("drawing draw image")
         draw.line([(5, 170), (80, 245)], fill="#0000FF")
         ink.display_draw(draw_image)
         ink.clear()
