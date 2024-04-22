@@ -35,8 +35,6 @@ class InkDisplay:
         logging.info("displaying image")
         Himage = Image.open(os.path.join(IMG_DIR, image))
         self.ink.display(self.ink.getbuffer(Himage))
-        logging.info("sleeping for 15 seconds")
-        time.sleep(15)
 
     def blank_image(self) -> Image:
         logging.info("creating new draw image")
@@ -53,8 +51,7 @@ class InkDisplay:
             font=ImageFont.truetype(os.path.join(FONT_DIR, font), size),
             fill=color,
         )
-        time.sleep(3)
-
+        
     def display_draw(self, image) -> None:
         logging.info("displaying draw image")
         self.ink.display(self.ink.getbuffer(image))
