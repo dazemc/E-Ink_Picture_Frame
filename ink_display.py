@@ -12,10 +12,6 @@ logging.basicConfig(level=logging.DEBUG)
 class InkDisplay:
     def __init__(self) -> None:
         self.ink = epd7in3f.EPD()
-        self.Himage_draw = Image.new(
-            "RGB", (self.ink.width, self.ink.height), self.ink.WHITE
-        )
-        self.draw = ImageDraw.Draw(self.Himage_draw)
 
     def init(self) -> None:
         logging.info("initialising")
@@ -41,18 +37,18 @@ class InkDisplay:
         self.ink.display(self.ink.getbuffer(Himage))
         logging.info("sleeping for 15 seconds")
         time.sleep(15)
-        self.font
 
-    def clear_draw(self) -> None:
+    def blank_image(self) -> Image:
         logging.info("creating new draw image")
-        self.Himage_draw = Image.new(
-            "RGB", (self.ink.width, self.ink.height), self.ink.WHITE
-        )
-        self.draw = ImageDraw(self.Himage_draw)
+        return Image.new("RGB", (self.ink.width, self.ink.height), self.ink.WHITE)
 
-    def draw_text(self, location, text, font, size, color) -> None:
+    def draw(self, image) -> ImageDraw:
+        return ImageDraw.Draw(image)
+
+    def draw_text(self, location, text, font, size, color, image) -> None:
         logging.info(f"writing text to draw image: {text}")
-        self.draw.text(
+        draw = self.draw(image)
+        draw.text(
             (location),
             text=text,
             font=ImageFont.truetype(os.path.join(FONT_DIR, font), size),
@@ -60,6 +56,6 @@ class InkDisplay:
         )
         time.sleep(3)
 
-    def display_draw(self) -> None:
+    def display_draw(self, image) -> None:
         logging.info("displaying draw image")
-        self.ink.display(self.ink.getbuffer(self.Himage_draw))
+        self.ink.display(self.ink.getbuffer(image))

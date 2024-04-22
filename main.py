@@ -19,22 +19,28 @@ def main():
         # ink.clear()
 
         # CREATE DRAW
+        draw_image = ink.blank_image()
         ink.draw_text(
-            (5, 0), text="hello", font=font, size=24, color="#FF0000"
-        )  # Must be font size that has been set above
-        ink.draw_text(
-            (5, 15), text="world", font=font, size=16, color="#FF0000"
+            (5, 0), text="hello", font=font, size=24, color="#FF0000", image=draw_image
         )
-        ink.draw.line((5, 170, 80, 245), fill="#0000FF")
-        ink.display_draw()
+        ink.draw_text(
+            (5, 30), text="world", font=font, size=16, color="#FF0000", image=draw_image
+        )
+        ink.line((5, 170, 80, 245), fill="#0000FF")
+        ink.display_draw(draw_image)
         ink.clear()
 
         # CREATE NEW DRAW
-        ink.clear_draw()
+        draw_image = ink.blank_image()
         ink.draw_text(
-            (5, 0), text="goodbye world", font=font, size=36, color="#00FF00"
+            (5, 0),
+            text="goodbye world",
+            font=font,
+            size=36,
+            color="#00FF00",
+            image=draw_image,
         )
-        ink.display_draw()
+        ink.display_draw(draw_image)
         ink.clear()
 
         # SLEEP
