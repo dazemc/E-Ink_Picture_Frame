@@ -32,7 +32,7 @@ class InkDisplay:
         logging.info("ctrl + c:")
         epd7in3f.epdconfig.module_exit()
         
-    def font(self, font, size, color) -> None:
+    def font(self, font, size) -> None:
         self.fonts[size] = ImageFont.truetype(os.path.join(FONT_DIR, font), size)
 
         
