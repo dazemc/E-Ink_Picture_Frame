@@ -43,10 +43,10 @@ class InkDisplay:
         logging.info("sleeping for 15 seconds")
         time.sleep(15)
 
-    def display_text(self, text, location, size, fill):
+    def display_text(self, text, location, size, color):
         Himage = Image.new('RGB', (self.ink.width, self.ink.height), self.ink.WHITE)
         draw = ImageDraw.Draw(Himage)
-        draw.text((location), text, self.fonts[size], fill=fill)
+        draw.text((location), text, font=self.fonts[size], fill=color)
         self.ink.display(self.ink.getbuffer(Himage))
         time.sleep(3)
         
