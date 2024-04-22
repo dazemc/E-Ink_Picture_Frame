@@ -54,9 +54,9 @@ class InkDisplay:
         logging.info(f"writing text to draw image: {text}")
         self.draw.text(
             (location),
-            text,
-            ImageFont.truetype(os.path.join(FONT_DIR, font), size),
-            color,
+            text=text,
+            font=ImageFont.truetype(os.path.join(FONT_DIR, font), size),
+            fill=color,
         )
         time.sleep(3)
 
