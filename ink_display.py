@@ -12,6 +12,7 @@ logging.basicConfig(level=logging.DEBUG)
 class InkDisplay:
     def __init__(self) -> None:
         self.ink = epd7in3f.EPD()
+        self.draw_image = self.blank_image()
 
     def init(self) -> None:
         logging.info("initialising")
